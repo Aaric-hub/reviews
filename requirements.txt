@@ -37,4 +37,4 @@ Werkzeug==2.1.1
 wincertstore==0.2
 zipp==3.7.0
 wordnet
-reuters
+
