@@ -32,7 +32,7 @@ def file():
             file = request.files['File']
             file.save(f"Upload/{file.filename}")
                #self.log.log(self.file_object,f"Files saved..")
-            return render_template('index.html', output = f"{file.filename} \t File uploaded successfuly...")
+            return request.response.ok,render_template('index.html', output = f"{file.filename} \t File uploaded successfuly...")
     except Exception as e:
             #self.log.log(self.file_object,f"Error while reciving file..:: {e}")
         raise Exception
