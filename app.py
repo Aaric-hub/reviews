@@ -9,6 +9,7 @@ from gensim.test.utils import common_texts
 from sklearn.feature_extraction.text import TfidfVectorizer
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import threading
 
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
@@ -91,12 +92,11 @@ def review():
 
             for i in range(len(y_pred_mod)):
                 if y_pred_mod[i] == 1:
-                    reviews["Developer Reply"][i] = "Doesn't Match"
+                    reviews["Developer Reply"][i] = y_pred_mod[i]
                 else:
-                    reviews["Developer Reply"][i] = "Matches"
-
+                    reviews["Developer Reply"][i] = y_pred_mod[i]
             reviews.to_csv("chrome_reviews_output.csv")
-            return render_template('index.html', prediction_output = "Prediction file created at :: chrome_reviews_output.csv")
+            return render_template('index.html', prediction_output = "Prediction file created at :: chrome_reviews_output.csv", )
 
     except Exception as e:
             #self.log.log(self.file_object,f"Error while reciving file..:: {e}")
