@@ -4,3 +4,4 @@ reuters
 punkt
 stopwords
 averaged_perceptron_tagger
+omw-1.4
