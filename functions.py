@@ -7,10 +7,17 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 
 def get_wordnet_pos(pos_tag):
+<<<<<<< HEAD
     #nltk.download('omw-1.4')
     #nltk.download('stopwords')
     #nltk.download('all')
     #nltk.download('averaged_perceptron_tagger')
+=======
+    #nltk.download('averaged_perceptron_tagger')
+    nltk.download('omw-1.4')
+    #nltk.download('stopwords')
+    #nltk.download('all')
+>>>>>>> 8cbec4dc6a3ec7f2669f7ccd0100a22de863e6cc
     if pos_tag.startswith('J'):
         return wordnet.ADJ
     elif pos_tag.startswith('V'):

@@ -1,0 +1,6 @@
+wordnet
+porter_test
+reuters
+punkt
+stopwords
+averaged_perceptron_tagger
