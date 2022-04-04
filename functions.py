@@ -7,7 +7,8 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 
 def get_wordnet_pos(pos_tag):
-    #nltk.download('omw-1.4')
+    nltk.download('omw-1.4')
+    nltk.download('stopwords')
     if pos_tag.startswith('J'):
         return wordnet.ADJ
     elif pos_tag.startswith('V'):
