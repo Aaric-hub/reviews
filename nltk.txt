@@ -3,3 +3,13 @@ porter_test
 reuters
 punkt
 stopwords
+averaged_perceptron_tagger_ru
+averaged_perceptron_tagger
+universal_tagset
+hmm_treebank_pos_tagger
+maxent_treebank_pos_tagger
+rslp
+porter_test
+vader_lexicon
+treebank
+dependency_treebank
